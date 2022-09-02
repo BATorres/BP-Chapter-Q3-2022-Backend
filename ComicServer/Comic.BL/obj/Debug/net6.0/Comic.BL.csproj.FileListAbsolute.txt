@@ -1,0 +1,15 @@
+C:\Users\Los Torres\Desktop\BP-Chapter-Q3-2022-Backend\ComicServer\Comic.BL\bin\Debug\net6.0\Comic.BL.deps.json
+C:\Users\Los Torres\Desktop\BP-Chapter-Q3-2022-Backend\ComicServer\Comic.BL\bin\Debug\net6.0\Comic.BL.dll
+C:\Users\Los Torres\Desktop\BP-Chapter-Q3-2022-Backend\ComicServer\Comic.BL\bin\Debug\net6.0\Comic.BL.pdb
+C:\Users\Los Torres\Desktop\BP-Chapter-Q3-2022-Backend\ComicServer\Comic.BL\bin\Debug\net6.0\Comic.DAL.dll
+C:\Users\Los Torres\Desktop\BP-Chapter-Q3-2022-Backend\ComicServer\Comic.BL\bin\Debug\net6.0\Comic.DAL.pdb
+C:\Users\Los Torres\Desktop\BP-Chapter-Q3-2022-Backend\ComicServer\Comic.BL\obj\Debug\net6.0\Comic.BL.csproj.AssemblyReference.cache
+C:\Users\Los Torres\Desktop\BP-Chapter-Q3-2022-Backend\ComicServer\Comic.BL\obj\Debug\net6.0\Comic.BL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Los Torres\Desktop\BP-Chapter-Q3-2022-Backend\ComicServer\Comic.BL\obj\Debug\net6.0\Comic.BL.AssemblyInfoInputs.cache
+C:\Users\Los Torres\Desktop\BP-Chapter-Q3-2022-Backend\ComicServer\Comic.BL\obj\Debug\net6.0\Comic.BL.AssemblyInfo.cs
+C:\Users\Los Torres\Desktop\BP-Chapter-Q3-2022-Backend\ComicServer\Comic.BL\obj\Debug\net6.0\Comic.BL.csproj.CoreCompileInputs.cache
+C:\Users\Los Torres\Desktop\BP-Chapter-Q3-2022-Backend\ComicServer\Comic.BL\obj\Debug\net6.0\Comic.BL.csproj.CopyComplete
+C:\Users\Los Torres\Desktop\BP-Chapter-Q3-2022-Backend\ComicServer\Comic.BL\obj\Debug\net6.0\Comic.BL.dll
+C:\Users\Los Torres\Desktop\BP-Chapter-Q3-2022-Backend\ComicServer\Comic.BL\obj\Debug\net6.0\refint\Comic.BL.dll
+C:\Users\Los Torres\Desktop\BP-Chapter-Q3-2022-Backend\ComicServer\Comic.BL\obj\Debug\net6.0\Comic.BL.pdb
+C:\Users\Los Torres\Desktop\BP-Chapter-Q3-2022-Backend\ComicServer\Comic.BL\obj\Debug\net6.0\ref\Comic.BL.dll
