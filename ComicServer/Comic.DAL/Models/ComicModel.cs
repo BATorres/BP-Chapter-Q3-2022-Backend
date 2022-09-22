@@ -5,16 +5,12 @@ namespace Comic.DAL.Models
     public class ComicModel
     {
         public int Id { get; set; }
-        [Required]
-        public string Name { get; set; }
-        public string RealName { get; set; }
-        [Required]
-        public string Characteristic { get; set; }
-        [Required]
-        public string Description { get; set; }
-        [Required]
+        public string? Name { get; set; } = null;
+        public string? RealName { get; set; } = null;
+        public string? Characteristic { get; set; } = null;
+        public string? Description { get; set; } = null;
         public int DebutYear { get; set; }
-        [Required]
         public int NumberIssues { get; set; }
+        public string? ImageUrl { get; set; } = null;
     }
 }

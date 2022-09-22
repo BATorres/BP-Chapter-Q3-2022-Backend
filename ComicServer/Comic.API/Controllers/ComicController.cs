@@ -1,82 +1,97 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Comic.BL.Repositories;
+using Comic.DAL.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Comic.API.Controllers
 {
-    public class ComicController : Controller
+    [Route("api/comic")]
+    [ApiController]
+    public class ComicController : ControllerBase
     {
-        // GET: HomeController
-        public ActionResult Index()
+        private readonly IComicRepository _comicService;
+
+        public ComicController(IComicRepository comicService)
         {
-            return View();
+            _comicService = comicService;
         }
 
-        // GET: HomeController/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
-        // GET: HomeController/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: HomeController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        // GET: api/comic
+        [HttpGet]
+        public async Task<IActionResult> Get()
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                var result = await _comicService.GetComics();
+                return Ok(result);
             }
-            catch
+            catch (Exception ex)
             {
-                return View();
+                return BadRequest(ex.Message);
             }
         }
 
-        // GET: HomeController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: HomeController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        // GET api/comic/5
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Get(int id)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                var userFound = await _comicService.GetComicById(id);
+                if (userFound == null) return NotFound();
+
+                return Ok(userFound);
             }
-            catch
+            catch (Exception ex)
             {
-                return View();
+                return BadRequest(ex.Message);
             }
         }
 
-        // GET: HomeController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: HomeController/Delete/5
+        // POST api/comic
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public async Task<IActionResult> Post([FromBody] ComicModel dataComic)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                var resultComic = await _comicService.PostComic(dataComic);
+                return Ok(resultComic);
             }
-            catch
+            catch (Exception ex)
             {
-                return View();
+                return BadRequest(ex.Message);
+            }
+        }
+
+        // PUT api/comic/5
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Put(int id, [FromBody] ComicModel dataComic)
+        {
+            try
+            {
+                if (id != dataComic.Id) return NotFound();
+                await _comicService.UpdateComic(id, dataComic);
+                return Ok(new { message = "Data updated successfuly." });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+        }
+
+        // DELETE api/comic/5
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            try
+            {
+                var result = await _comicService.DeleteComicById(id);
+                if (result == "NOT_FOUND") return NotFound();
+                return Ok(new { message = "Data deleted successfuly." });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
             }
         }
     }
